@@ -17,9 +17,9 @@ void pinRGB::setRGB(int R, int G, int B){
     ledcWrite(2, B);
 }
 void pinRGB::setColor(int codeColor){
-        ledcWrite(0, R);
-        ledcWrite(1, G);
-        ledcWrite(2, B);
+        ledcWrite(0, 0);
+        ledcWrite(1, 0);
+        ledcWrite(2, 0);
     
     if(codeColor == 1){
         ledcWrite(0, 0);
@@ -35,14 +35,14 @@ void pinRGB::setColor(int codeColor){
 		ledcWrite(2, 255);
 	}
     if(codeColor == 4){
-        ledWrite(0, 255);
+        ledcWrite(0, 255);
     }
 	if(codeColor == 5) {
 		ledcWrite(0, 134);
 		ledcWrite(1, 50);
 		ledcWrite(2, 152);
 	}
-    if(codeColor = 6) {
+    if(codeColor == 6) {
         ledcWrite(0, 255);
         ledcWrite(1, 255);
     }
@@ -53,32 +53,32 @@ void pinRGB::setClean(){
     ledcWrite(2, 0);
 }
 void pinRGB::test(){
-	digitalWrite(_pinR, HIGH);
+	digitalWrite(0, HIGH);
 	delay(1000);
-	digitalWrite(_pinR, LOW);
-	digitalWrite(_pinG, HIGH);
+	digitalWrite(0, LOW);
+	digitalWrite(1, HIGH);
 	delay(1000);
-	digitalWrite(_pinG, LOW);
-	digitalWrite(_pinB, HIGH);
+	digitalWrite(1, LOW);
+	digitalWrite(2, HIGH);
 	delay(1000);
-	digitalWrite(_pinB, LOW);
+	digitalWrite(2, LOW);
 }
 void pinRGB::setStatus(bool r, bool g, bool b){
     if(r == true) {
-        digitalWrite(_pinR, HIGH);
+        digitalWrite(0, HIGH);
     } else if(r == false) {
-        digitalWrite(_pinR, LOW);
+        digitalWrite(0, LOW);
     }
 
     if(g == true) {
-        digitalWrite(_pinG, HIGH);
+        digitalWrite(1, HIGH);
     } else if(g == false) {
-        digitalWrite(_pinG, LOW);
+        digitalWrite(1, LOW);
     }
 
     if(b == true) {
-        digitalWrite(_pinB, HIGH);
+        digitalWrite(2, HIGH);
     } else if(b == false) {
-        digitalWrite(_pinB, LOW);
+        digitalWrite(2, LOW);
     }
 }

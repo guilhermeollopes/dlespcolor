@@ -8,6 +8,7 @@ class pinRGB{
 
     public:
         pinRGB(int pinR, int pinG, int pinB);
+        void isAnodeCom();
         void setRGB(int R, int G, int B);
         void setColor(int codeColor);
         void setClean();

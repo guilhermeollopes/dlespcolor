@@ -16,10 +16,14 @@ pinRGB::pinRGB(int pinR, int pinG, int pinB) {
     ledcAttachPin(pinB, 2);
 }
 void pinRGB::setRGB(int R, int G, int B){
+    int rI = (255 - R);
+    int gI = (255 - G);
+    int bI = (255 - B);
+    
     if(anode == true){
-        ledcWrite(0, 255 - R);
-        ledcWrite(1, 255 - G);
-        ledcWrite(2, 255 - B);
+        ledcWrite(0, rI);
+        ledcWrite(1, gI);
+        ledcWrite(2, bI);
     }
     if(anode == false){
         ledcWrite(0, R);
@@ -34,9 +38,7 @@ void pinRGB::setColor(int codeColor){
             ledcWrite(2, 0);
         
         if(codeColor == 1){
-            ledcWrite(0, 0);
-            ledcWrite(1, 0);
-            ledcWrite(2, 0);
+            ledcWrite(2, 255);
 
         }
         if(codeColor == 2){
@@ -60,34 +62,32 @@ void pinRGB::setColor(int codeColor){
         }
     }
     if(anode == true) {
-            ledcWrite(0, 255 - 0);
-            ledcWrite(1, 255 - 0);
-            ledcWrite(2, 255 - 0);
+            ledcWrite(0, 255;
+            ledcWrite(1, 255);
+            ledcWrite(2, 255);
         
         if(codeColor == 1){
-            ledcWrite(0, 255 - 0);
-            ledcWrite(1, 255 - 0);
-            ledcWrite(2, 255 - 0);
+            ledcWrite(2, 0);
 
         }
         if(codeColor == 2){
-            ledcWrite(1, 255 - 255);
+            ledcWrite(1, 0);
         }
         if(codeColor == 3) {
-            ledcWrite(1, 255 - 255);
-            ledcWrite(2, 255 - 255);
+            ledcWrite(1, 0);
+            ledcWrite(2, 0);
         }
         if(codeColor == 4){
-            ledcWrite(0, 255 - 255);
+            ledcWrite(0, 0);
         }
         if(codeColor == 5) {
-            ledcWrite(0, 255 - 134);
-            ledcWrite(1, 255 - 50);
-            ledcWrite(2, 255 - 152);
+            ledcWrite(0, 121);
+            ledcWrite(1, 205);
+            ledcWrite(2, 103);
         }
         if(codeColor == 6) {
-            ledcWrite(0, 255 - 255);
-            ledcWrite(1, 255 - 255);
+            ledcWrite(0, 0);
+            ledcWrite(1, 0);
         }
     }
 }
@@ -98,9 +98,9 @@ void pinRGB::setClean(){
         ledcWrite(2, 0);
     }
     if(anode == true){
-        ledcWrite(0, 255 - 0);
-        ledcWrite(1, 255 - 0);
-        ledcWrite(2, 255 - 0);
+        ledcWrite(0, 255);
+        ledcWrite(1, 255);
+        ledcWrite(2, 255);
     }
 }
 void pinRGB::test(){

@@ -5,6 +5,8 @@
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/guilhermeoliveiralopes/dlespcolor?color=6bff87&label=downloads)
 ![GitHub](https://img.shields.io/github/license/guilhermeoliveiralopes/dlespcolor?color=6ebdff)
 
+Atenção: Esta biblioteca é uma ramificação da biblioteca DLAColor, para que seja possivel a ultilização dela no ESP, por conta disto, atualização e novidades que chegam na DLAColor só são transfeiradas para esta biblioteca apenas quando estiverem estáveis.
+
 ## Para que serve?
  A biblioteca DLESP Color, foi feita com o intuito de facilitar o uso de LED e lampadas RGB. O DLESP Color faz você ter muitas opções de ultilização do LED, sem precisar ultizar diversos comandos.
 ## Quais os métodos que posso utilizar?
